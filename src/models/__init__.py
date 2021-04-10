@@ -28,6 +28,10 @@ class BootcampModel (db.Model):
     def get_all():
         return BootcampModel.query.all()
 
+    @staticmethod
+    def get_by_id(id):
+        return BootcampModel.query.get(id)
+
     def __repr__(self):
         return f'<Bootcamp: {self.name}>'
 
