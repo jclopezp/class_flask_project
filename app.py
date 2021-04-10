@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, redirect
 
 from src.models import db
 from src.views import bootcamp_api
@@ -17,5 +17,6 @@ db.app = app
 #db.create_all()
 
 @app.route("/")
-def hola_mundo():
-    return "Hola mundo"
+def hello():
+    return "Hello DEV"
+    #return redirect("https://www.moyoai.com/", code=302)
